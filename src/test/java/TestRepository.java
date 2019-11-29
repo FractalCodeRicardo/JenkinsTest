@@ -36,9 +36,11 @@ public class TestRepository {
 
         if(result.size()!=rep.getDataSource().getData().size())
             Assert.fail(("Method find must return all persons"));
+    }
 
-
-
+    @Test
+    public void find_fail(){
+        Assert.fail("Method find fail");
     }
 
     private Repository<Person> createRepository(){
