@@ -28,6 +28,19 @@ public class TestRepository {
             Assert.fail(("Method find must return item that match predicate"));
     }
 
+    @Test
+    public void find_return_all(){
+        Repository<Person> rep = createRepository();
+        List<Person> result = rep.find(i->true);
+
+
+        if(result.size()!=rep.getDataSource().getData().size())
+            Assert.fail(("Method find must return all persons"));
+
+
+
+    }
+
     private Repository<Person> createRepository(){
         Repository<Person> rep= new Repository<>();
         DataSource<Person> dummyDataSource = new DummyDataSource();

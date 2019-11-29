@@ -17,6 +17,7 @@ public class Repository<T> {
 
 
     public List<T> find(Predicate<T> predicate){
+
         List<T> result =  new ArrayList<>();
         for (T t: dataSource.getData()) {
             if(predicate.test(t))
