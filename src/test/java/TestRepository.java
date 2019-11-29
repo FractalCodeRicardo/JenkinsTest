@@ -40,6 +40,12 @@ public class TestRepository {
 
     @Test
     public void find_fail(){
+        Assert.fail("Method find fail");
+    }
+
+
+    @Test
+    public void fails(){
         //Assert.fail("Method find fail");
     }
 
